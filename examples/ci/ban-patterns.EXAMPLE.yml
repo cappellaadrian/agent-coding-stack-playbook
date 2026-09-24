@@ -48,7 +48,6 @@ jobs:
       # --- Example: import boundary (Electron main vs renderer style) ---
       # Intent: prevent UI process from importing heavy main-process modules.
       # Replace paths with your layers (e.g. app/api must not import app/web).
-      # Replace paths with your layers (e.g. app/api must not import app/web).
       - name: EXAMPLE import boundary
         if: false
         run: |
