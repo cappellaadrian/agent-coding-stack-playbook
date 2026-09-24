@@ -1,0 +1,15 @@
+---
+description: Architecture preferences — colocation, import boundaries, Dune-as-method
+globs:
+alwaysApply: true
+---
+
+# Architecture (Dune principles as method — not an OSS framework)
+
+- **Feature colocation:** keep code for one user-facing feature in one directory when practical.
+- **Import boundaries:** do not cross layer boundaries (e.g. UI/renderer importing main/host-only modules). Prefer CI enforcement over comments.
+- **Conventional nouns:** introduce clear entry points / feature folders so agents copy safe patterns.
+- **Shortest path = best path:** if agents keep taking a shortcut, make that shortcut the correct design — or ban it in CI.
+- **Comments are not policy:** durable rules belong in lints, types, and tests — not in narrative comments agents will ossify incorrectly.
+- Refactors that add guardrails are often worth the tokens *before* scaling cloud agents on greenfield slop.
+- Adapt Electron/React examples from the workshop (useEffect bans, main vs renderer graphs) only when they fit **this** stack.

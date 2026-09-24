@@ -1,0 +1,61 @@
+# EXAMPLE ONLY — adapt to your stack and linters.
+# From Lauren Tan workshop themes (Grokbot/Dune): hard CI > soft rules.
+# Ban patterns that agents repeatedly abuse; do not copy React/Electron bans blindly.
+#
+# Suggested wiring:
+# - ESLint / oxlint / Biome custom rules
+# - dependency-cruiser or custom import-graph check for layer boundaries
+# - ripgrep CI job failing on forbidden patterns
+#
+# Comments below explain the *intent* of workshop examples.
+
+name: ban-patterns-example
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  ban-patterns:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # --- Example: ban useEffect (React footgun in THEIR architecture) ---
+      # Intent: force explicit data/effects patterns agents won't "just useEffect away."
+      # Only enable if your architecture provides replacements. Otherwise this harms you.
+      - name: EXAMPLE ban useEffect
+        if: false  # set true only when ready
+        run: |
+          if rg -n --glob '*.tsx' --glob '*.jsx' '\buseEffect\b' src; then
+            echo "::error::useEffect is banned by policy — use approved primitives."
+            exit 1
+          fi
+
+      # --- Example: ban durable policy-as-code-comments ---
+      # Intent: agents invent historical comments ("Lauren said never do X") that rot.
+      # Prefer lints/docs. A total comment ban is aggressive — many teams ban ONLY
+      # TODO/FIXME noise or generated narration. Tune the regex.
+      - name: EXAMPLE ban narrating code comments
+        if: false
+        run: |
+          # Illustrative: fail on comments that claim authority without tickets
+          if rg -n --glob '*.ts' --glob '*.tsx' '//.*(never|always|Lauren|do not remove).*' src; then
+            echo "::error::Policy belongs in CI/lints, not narrative comments."
+            exit 1
+          fi
+
+      # --- Example: import boundary (Electron main vs renderer style) ---
+      # Intent: prevent UI process from importing heavy main-process modules.
+      # Replace paths with your layers (e.g. app/api must not import app/web).
+      # Replace paths with your layers (e.g. app/api must not import app/web).
+      - name: EXAMPLE import boundary
+        if: false
+        run: |
+          if rg -n --glob '*.ts' --glob '*.tsx' "from ['\"].*electron-main" src/electron-renderer; then
+            echo "::error::renderer must not import electron-main"
+            exit 1
+          fi
+
+      - name: placeholder success
+        run: echo "Enable the EXAMPLE steps above only after adapting paths and policy."

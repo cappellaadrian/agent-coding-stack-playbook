@@ -1,0 +1,18 @@
+---
+description: Core agent contract — trust curve, evidence, AGENTS.md
+globs:
+alwaysApply: true
+---
+
+# Core (poteto / pstack playbook)
+
+- Follow repo `AGENTS.md` and `docs/` when present.
+- **Finish condition first.** State how we will know the task is done in observable terms.
+- **Repro before fix.** No speculative shotgun patches.
+- **Compiles ≠ evidence.** Prefer running the real app via the verify skill.
+- **Writer ≠ verifier.** After substantial changes, recommend a fresh agent to verify.
+- **Atomic PRs.** Split unrelated concerns; keep history bisectable.
+- **Hard CI > soft rules.** When you spot a repeated footgun, propose a lint/CI check, not only a prose rule.
+- **Shortest path = best path.** Prefer colocated, conventional feature layouts agents will naturally copy.
+- Do not invent Lauren Tan / Cursor-internal details; cite `docs/00-sources.md` or record unknowns in `docs/gaps.md`.
+- Distinguish **installable** tools (pstack, open-pstack) from **internal** ones (Dune package, Benny as shipped, Grok Bot internals, unlimited tokens).

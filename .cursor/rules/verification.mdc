@@ -1,0 +1,14 @@
+---
+description: Verification requirements — real app, feature maps, evidence
+globs:
+alwaysApply: true
+---
+
+# Verification
+
+- Use `.cursor/skills/verify-app/SKILL.md` when validating product behavior: Launch → Doctor → Drive → Evidence → Cleanup.
+- Maintain feature maps under `.cursor/skills/verify-app/features/`. Index: `features/README.md`.
+- pstack: `/create-verification-skill` scaffolds; `/maintain-verification-skill` updates maps/skills and **must not edit product code**.
+- Attach evidence to PRs (see `.github/PULL_REQUEST_TEMPLATE.md`).
+- Cloud/factory agents should reuse the **same** verify skill as local — do not invent a weaker cloud path.
+- If verification cannot run, say blocked and why; do not silently substitute "unit tests passed."
