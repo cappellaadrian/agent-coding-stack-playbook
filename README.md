@@ -71,6 +71,19 @@ Complementary to Lauren Tan / pstack verification: a **process** mega-prompt for
 
 **In Claude Code:** open this repo (or copy the prompt/skill into your app), paste the prompt or invoke **senior-engineer-mode**, then append your idea/PRD/repo. Still use poteto / verify-app for finish conditions and real-app evidence.
 
+## Luxury real estate scroll site (Claude Code build prompt)
+
+Encoded from three Instagram reels Adrian shared: cinematic scroll-driven luxury RE landing (AURELIA-style levels + GSAP / ScrollTrigger / Lenis). Visual refs from reels 1–2; **installable stack + caption tutorial from reel 3** (@web.love.ed).
+
+| File | Purpose |
+|------|---------|
+| [`docs/07-luxury-real-estate-scroll-sites.md`](docs/07-luxury-real-estate-scroll-sites.md) | Sources, reel inventory, installable vs visual-only, gaps |
+| [`prompts/claude-luxury-real-estate-scroll-site.md`](prompts/claude-luxury-real-estate-scroll-site.md) | Paste-ready Claude Code build prompt |
+| [`.claude/skills/luxury-re-scroll-site/SKILL.md`](.claude/skills/luxury-re-scroll-site/SKILL.md) | When-to-use skill wrapper |
+| [`examples/luxury-re-aurelia-spec.md`](examples/luxury-re-aurelia-spec.md) | Product/UX spec (reels 1 + 3) |
+
+**In Claude Code:** open this repo (or copy the prompt/skill into your app), paste [`prompts/claude-luxury-real-estate-scroll-site.md`](prompts/claude-luxury-real-estate-scroll-site.md) or invoke **luxury-re-scroll-site**, optionally prepend Senior Engineer Mode, then build. Placeholder images are OK.
+
 ## Trust curve (summary)
 
 | Stage | Mode | What unlocks the next stage |
@@ -94,6 +107,7 @@ Details: [`docs/01-trust-curve.md`](docs/01-trust-curve.md).
 | Hard CI lints you write yourself | Overnight auto-merge of cloud PRs |
 | Atomic PR habits + PR templates | Internal Control Glass / Agents Window skills |
 | Senior Engineer Mode prompt + skill (this repo) | God of Prompt “Claude Mastery Guide” (paid/DM) |
+| Luxury RE scroll prompt + skill + AURELIA spec (this repo) | Exact AURELIA / webtrend.online site code (visual refs only) |
 
 **Dune** is treated here as a **method** (shortest path = best path, feature colocation, import-graph CI, ban fragile patterns), not as a downloadable framework. See [`docs/03-hard-guards-vs-soft-rules.md`](docs/03-hard-guards-vs-soft-rules.md).
 
@@ -108,6 +122,7 @@ Details: [`docs/01-trust-curve.md`](docs/01-trust-curve.md).
 | [`docs/04-pr-and-shipping.md`](docs/04-pr-and-shipping.md) | Atomic PRs; writer ≠ verifier |
 | [`docs/05-evals-and-skill-maintenance.md`](docs/05-evals-and-skill-maintenance.md) | Evals as unit tests for skills |
 | [`docs/06-claude-opus-senior-engineer-mode.md`](docs/06-claude-opus-senior-engineer-mode.md) | Senior Engineer Mode process prompt |
+| [`docs/07-luxury-real-estate-scroll-sites.md`](docs/07-luxury-real-estate-scroll-sites.md) | Luxury RE scroll sites (IG reels → Claude Code) |
 | [`docs/gaps.md`](docs/gaps.md) | What we deliberately did **not** invent |
 
 ## Scripts
@@ -124,6 +139,7 @@ Details: [`docs/01-trust-curve.md`](docs/01-trust-curve.md).
 - pstack: https://github.com/cursor/plugins/tree/main/pstack
 - open-pstack: https://github.com/ericlitman/open-pstack
 - Senior Engineer Mode IG: https://www.instagram.com/p/DdpuWcNHHSM/ (@godofprompt; credit @aiedge_)
+- Luxury RE scroll reels: https://www.instagram.com/reel/DYKqdP2MBG0/ (@web.love.ed; primary); https://www.instagram.com/reel/DbORBRzBCyJ/ (@polanaeem.tech); https://www.instagram.com/reel/DOQpt79EZ55/ (@web.design.trends)
 
 **Duration note:** Some Instagram clips claim “38 min”; that is likely an edit. The full Maven / YouTube workshop is roughly **50–60 minutes** (transcript ends ~55:40).
 
