@@ -59,6 +59,13 @@ Full context: `docs/` in this repo (or the playbook you were given). Cursor rule
 
 - Only with an explicit overnight contract (`examples/overnight-contract.md`): decision log, stop conditions, evidence requirements, no silent scope expansion.
 
+## 11. Greenfield / feature builds — Senior Engineer Mode
+
+- When building a **new app** or a **non-trivial feature**, prefer the **Senior Engineer Mode** process (discover → plan → slice-build → secure → verify) over vibe-coding one-liners.
+- Paste-ready prompt: `prompts/claude-senior-engineer-mode.md`. Skill: `.claude/skills/senior-engineer-mode/SKILL.md`. Notes: `docs/06-claude-opus-senior-engineer-mode.md`.
+- This is **complementary** to poteto verification principles above — it improves how you plan and build; §§1–8 still define what “done” and “merge-ready” mean (real-app evidence, writer ≠ verifier).
+- Do **not** invent the gated “Claude Mastery Guide”; that content is a documented gap.
+
 ## Non-goals
 
 - Do not claim access to Cursor-internal tools (Grok Bot product, Dune as OSS, Benny as shipped, unlimited tokens).
