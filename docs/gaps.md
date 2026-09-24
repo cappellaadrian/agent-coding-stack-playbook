@@ -33,6 +33,14 @@ Things we **deliberately omit or mark uncertain** because public sources do not 
 | Every playbook name | See pstack guide; examples in `examples/poteto-mode-prompts.md` are attributed prompts, not a complete catalog |
 | Multi-model routing defaults | Configure via pstack setup; model matrix changes over time |
 
+## Senior Engineer Mode / God of Prompt
+
+| Gap | Notes |
+|-----|--------|
+| Verbatim @aiedge_ X full-text original | Not found publicly at encode time (2026-09-24); playbook ships a **labeled reconstructed composite** from the IG carousel inventory only |
+| “Claude Mastery Guide” (comment “CLAUDE” / paid/DM) | **Not reproduced** — do not invent; CTA only on https://www.instagram.com/p/DdpuWcNHHSM/ and https://godofprompt.ai/guides/claude-mastery-guide |
+| Exact slide screenshot OCR beyond browser report | Encode from the carousel inventory in `docs/06-claude-opus-senior-engineer-mode.md`; do not pad with invented “full guide” prose |
+
 ## This playbook's templates
 
 | Gap | Notes |

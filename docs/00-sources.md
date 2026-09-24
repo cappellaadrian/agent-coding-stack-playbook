@@ -22,6 +22,17 @@ Primary materials for this playbook. Prefer these over secondary summaries. Do *
 | pstack guide README | https://github.com/cursor/plugins/blob/main/pstack/docs/guide/README.md | Goal + checkable outcome; overnight contracts |
 | open-pstack (Claude Code / Codex port) | https://github.com/ericlitman/open-pstack | Unofficial community port; tracks upstream pstack versions |
 
+## Senior Engineer Mode (Claude process)
+
+| Source | URL | Notes |
+|--------|-----|--------|
+| Instagram carousel | https://www.instagram.com/p/DdpuWcNHHSM/ | @godofprompt; PART 1–5 process mega-prompt |
+| Publisher | https://www.instagram.com/godofprompt/ | @godofprompt |
+| Credited origin | https://x.com/aiedge_ | @aiedge_ / X — credit on the IG post |
+| Claude Mastery Guide (CTA) | Comment “CLAUDE” on IG post; https://godofprompt.ai/guides/claude-mastery-guide | **Not encoded** — paid/DM gap |
+
+Playbook encoding: [`06-claude-opus-senior-engineer-mode.md`](./06-claude-opus-senior-engineer-mode.md), [`../prompts/claude-senior-engineer-mode.md`](../prompts/claude-senior-engineer-mode.md). The paste-ready prompt is a **reconstructed composite** from the carousel inventory when no public verbatim X full text was found.
+
 ## Concepts named in sources (not separate products)
 
 - **Trust curve** — Maven/YouTube transcript
@@ -30,6 +41,7 @@ Primary materials for this playbook. Prefer these over secondary summaries. Do *
 - **Dune** — transcript: cheeky architecture for Grokbot; principles, not OSS
 - **Benny** — X article + transcript: webhook/Slack → cloud agent → repro/fix/PR pattern
 - **Grok Bot** — Cursor product mentioned in workshop; internal/product, not this repo
+- **Senior Engineer Mode** — process prompt (IG carousel); not a Claude model variant
 
 ## This repository
 
@@ -42,6 +54,7 @@ Primary materials for this playbook. Prefer these over secondary summaries. Do *
 ```text
 Source: Lauren Tan Maven workshop transcript https://cho.sh/7D77B5
 Source: pstack https://github.com/cursor/plugins/tree/main/pstack
+Source: Senior Engineer Mode IG https://www.instagram.com/p/DdpuWcNHHSM/ (@godofprompt; credit @aiedge_)
 ```
 
 If you cannot find a claim in the table above, it belongs in `gaps.md`, not in agent instructions as fact.

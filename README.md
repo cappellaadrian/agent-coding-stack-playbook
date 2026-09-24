@@ -59,6 +59,18 @@ cd agent-coding-stack-playbook
 
 4. Keep soft rules in `.cursor/rules/`; put **hard** bans in CI (see [`examples/ci/ban-patterns.EXAMPLE.yml`](examples/ci/ban-patterns.EXAMPLE.yml)).
 
+## Senior Engineer Mode (Claude process prompt)
+
+Complementary to Lauren Tan / pstack verification: a **process** mega-prompt for greenfield and feature work (discover → plan → slice-build → secure → verify). Encoded from [@godofprompt](https://www.instagram.com/godofprompt/) IG carousel (credit [@aiedge_](https://x.com/aiedge_)); **not** the paid/DM Claude Mastery Guide.
+
+| File | Purpose |
+|------|---------|
+| [`docs/06-claude-opus-senior-engineer-mode.md`](docs/06-claude-opus-senior-engineer-mode.md) | Sources, carousel inventory, installable vs gap |
+| [`prompts/claude-senior-engineer-mode.md`](prompts/claude-senior-engineer-mode.md) | Paste-ready prompt for Claude Code |
+| [`.claude/skills/senior-engineer-mode/SKILL.md`](.claude/skills/senior-engineer-mode/SKILL.md) | When-to-use skill wrapper |
+
+**In Claude Code:** open this repo (or copy the prompt/skill into your app), paste the prompt or invoke **senior-engineer-mode**, then append your idea/PRD/repo. Still use poteto / verify-app for finish conditions and real-app evidence.
+
 ## Trust curve (summary)
 
 | Stage | Mode | What unlocks the next stage |
@@ -81,6 +93,7 @@ Details: [`docs/01-trust-curve.md`](docs/01-trust-curve.md).
 | Feature-map *pattern*; this repo's verify-app **template** | Unlimited tokens / lab-scale spend |
 | Hard CI lints you write yourself | Overnight auto-merge of cloud PRs |
 | Atomic PR habits + PR templates | Internal Control Glass / Agents Window skills |
+| Senior Engineer Mode prompt + skill (this repo) | God of Prompt “Claude Mastery Guide” (paid/DM) |
 
 **Dune** is treated here as a **method** (shortest path = best path, feature colocation, import-graph CI, ban fragile patterns), not as a downloadable framework. See [`docs/03-hard-guards-vs-soft-rules.md`](docs/03-hard-guards-vs-soft-rules.md).
 
@@ -94,6 +107,7 @@ Details: [`docs/01-trust-curve.md`](docs/01-trust-curve.md).
 | [`docs/03-hard-guards-vs-soft-rules.md`](docs/03-hard-guards-vs-soft-rules.md) | CI > soft rules; Dune principles |
 | [`docs/04-pr-and-shipping.md`](docs/04-pr-and-shipping.md) | Atomic PRs; writer ≠ verifier |
 | [`docs/05-evals-and-skill-maintenance.md`](docs/05-evals-and-skill-maintenance.md) | Evals as unit tests for skills |
+| [`docs/06-claude-opus-senior-engineer-mode.md`](docs/06-claude-opus-senior-engineer-mode.md) | Senior Engineer Mode process prompt |
 | [`docs/gaps.md`](docs/gaps.md) | What we deliberately did **not** invent |
 
 ## Scripts
@@ -109,9 +123,10 @@ Details: [`docs/01-trust-curve.md`](docs/01-trust-curve.md).
 - X: *How I Use Cursor* (@poteto)
 - pstack: https://github.com/cursor/plugins/tree/main/pstack
 - open-pstack: https://github.com/ericlitman/open-pstack
+- Senior Engineer Mode IG: https://www.instagram.com/p/DdpuWcNHHSM/ (@godofprompt; credit @aiedge_)
 
 **Duration note:** Some Instagram clips claim “38 min”; that is likely an edit. The full Maven / YouTube workshop is roughly **50–60 minutes** (transcript ends ~55:40).
 
 ## License / intent
 
-This playbook is a synthesis for personal / team use. Prefer Lauren's upstream pstack wording when in doubt. File issues against invented details in [`docs/gaps.md`](docs/gaps.md) rather than "fixing in" talk quotes.
+This playbook is a synthesis for personal / team use. Prefer Lauren's upstream pstack wording when in doubt. File issues against invented details in [`docs/gaps.md`](docs/gaps.md) rather than "filling in" talk quotes.
